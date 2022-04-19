@@ -1,4 +1,2 @@
 # NeuralFace
-NeuralFace
-
-안녕하세요
+NeuralFace reimplementation
