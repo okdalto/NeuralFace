@@ -92,6 +92,7 @@ pose_img_list.sort()
 idt_img_list = torch.stack([transform(Image.open(img_path)) for img_path in idt_img_list], dim=0).to(device)
 pose_img_list = [transform(Image.open(img_path)).to(device) for img_path in pose_img_list]
 
+
 with torch.no_grad():
     idt_feature = idt_encoder(idt_img_list)
     idt_feature = idt_feature.mean(dim=0, keepdim=True)
